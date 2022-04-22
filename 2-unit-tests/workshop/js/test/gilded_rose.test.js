@@ -1,5 +1,5 @@
 const {Shop, Item} = require("../src/gilded_rose");
-const fixture = require("./texttest_fixture");
+const gildedRose = require("./texttest_fixture");
 
 
 describe("Gilded Rose", function() {
@@ -7,7 +7,7 @@ describe("Gilded Rose", function() {
   let shop;
 
   beforeAll(() => {
-    shop = fixture.gildedRose;
+    shop = gildedRose;
   })
 
   it("should foo", function() {

@@ -26,6 +26,4 @@ for (let day = 0; day < days; day++) {
   gildedRose.updateQuality();
 }
 
-module.exports = {
-  gildedRose
-}
+module.exports = gildedRose
