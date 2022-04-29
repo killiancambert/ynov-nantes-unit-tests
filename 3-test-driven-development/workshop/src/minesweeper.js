@@ -2,6 +2,10 @@ class Game {
   constructor(grid, m = null, n = null, field = null) {
     const regex = /^[.|*]*$/
 
+    if (grid === null) {
+      throw 'You should put the right format of input'
+    }
+
     let input = grid.split("\n").filter((item) => item !== "")
 
     let params = input.shift().split(" ")

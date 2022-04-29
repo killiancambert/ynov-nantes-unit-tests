@@ -4,6 +4,14 @@ const grid = "4 4\n*...\n....\n.*..\n....\n"
 
 describe("Minesweeper", () => {
   describe("Input", () => {
+    it("should not be null", () => {
+      const t = () => {new Game("2 3\n.*.\n..*\n")}
+      const t2 = () => {new Game(null)}
+
+      expect(t).not.toThrowError()
+      expect(t2).toThrowError('You should put the right format of input')
+    })
+
     it("should be a 2*3 field", () => {
       const game = new Game("2 3\n.*.\n..*\n")
       expect(game.m).toBe(2)
@@ -75,6 +83,7 @@ describe("Minesweeper", () => {
   })
 
   describe('Output', () => {
+
     it("should be the same grid", () => {
       const game = new Game("4 4\n*...\n....\n.*..\n....")
       const grid = 'Field #1:\n*100\n2210\n1*10\n1110'
@@ -82,5 +91,6 @@ describe("Minesweeper", () => {
       let field = game.transformToPlayableGrid();
       expect(field).toBe(grid)
     })
+
   })
 })
